@@ -1,16 +1,13 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JDialog.java to edit this template
- */
-package poly.quanan.ui;
 
-import gao.dao.ChiTietHoaDonDAO;
-import gao.dao.HoaDonDAO;
-import gao.dao.impl.ChiTietHoaDonDAOimpl;
-import gao.dao.impl.HoaDonDAOimpl;
-import gao.entity.ChiTietHoaDon;
-import gao.entity.HoaDon;
-import gao.util.XDialog;
+package poly.quanan.ui.manager;
+
+import poly.quanan.dao.BillDetailDAO;
+import poly.quanan.dao.BillDAO;
+import poly.quanan.dao.impl.BillDetailDAOImpl;
+import poly.quanan.dao.impl.BillDAOImpl;
+import poly.quanan.entity.BillDetail;
+import poly.quanan.entity.Bill;
+import poly.quanan.util.XDialog;
 import java.awt.Frame;
 import java.sql.Date;
 import java.sql.Timestamp;
@@ -23,17 +20,17 @@ import lombok.Setter;
  *
  * @author lengh
  */
-public class HoaDonJDialog extends javax.swing.JDialog implements HoaDonController{
+public class BillManagerJDialog extends javax.swing.JDialog implements BillController{
 
-//    private HoaDon hoaDon;
+//    private Bill Bill;
     /**
-     * Creates new form HoaDonJDialog
+     * Creates new form BillJDialog
      */
-    public HoaDonJDialog(java.awt.Frame parent, boolean modal) {
+    public BillManagerJDialog(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
-//        this.hoaDon = hoaDon;
-//        setForm(hoaDon);
+//        this.Bill = Bill;
+//        setForm(Bill);
     }
 
     /**
@@ -53,17 +50,17 @@ public class HoaDonJDialog extends javax.swing.JDialog implements HoaDonControll
         jScrollPane1 = new javax.swing.JScrollPane();
         tblBillDetails = new javax.swing.JTable();
         jPanel2 = new javax.swing.JPanel();
-        txtUsername = new javax.swing.JTextField();
+        txtusername = new javax.swing.JTextField();
         jLabel15 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        txtTrangThai = new javax.swing.JTextField();
+        txtStatus = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        txtThoiGianVao = new javax.swing.JTextField();
-        txtCardId = new javax.swing.JTextField();
+        txtCheckin = new javax.swing.JTextField();
+        txtcardId = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
-        txtThoiGianRa = new javax.swing.JTextField();
-        txtMaHD = new javax.swing.JTextField();
+        txtCheckout = new javax.swing.JTextField();
+        txtmaHD = new javax.swing.JTextField();
         jLabel14 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
@@ -74,7 +71,7 @@ public class HoaDonJDialog extends javax.swing.JDialog implements HoaDonControll
             }
         });
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(204, 255, 255));
 
         btnAdd.setBackground(new java.awt.Color(204, 204, 204));
         btnAdd.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -142,7 +139,7 @@ public class HoaDonJDialog extends javax.swing.JDialog implements HoaDonControll
         });
         jScrollPane1.setViewportView(tblBillDetails);
 
-        jPanel2.setBackground(new java.awt.Color(255, 243, 235));
+        jPanel2.setBackground(new java.awt.Color(204, 255, 255));
 
         jLabel15.setText("Thời điểm thanh toán");
 
@@ -163,21 +160,21 @@ public class HoaDonJDialog extends javax.swing.JDialog implements HoaDonControll
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtMaHD, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtusername, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtmaHD, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel13)
                     .addComponent(jLabel7))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel14)
-                    .addComponent(txtTrangThai, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtCardId, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtcardId, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel8))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtThoiGianVao, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtCheckin, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel9)
-                    .addComponent(txtThoiGianRa, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtCheckout, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel15))
                 .addContainerGap())
         );
@@ -192,10 +189,10 @@ public class HoaDonJDialog extends javax.swing.JDialog implements HoaDonControll
                     .addComponent(jLabel9))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(txtMaHD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtmaHD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(txtThoiGianVao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(txtCardId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(txtCheckin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtcardId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel13)
@@ -204,10 +201,10 @@ public class HoaDonJDialog extends javax.swing.JDialog implements HoaDonControll
                         .addComponent(jLabel14)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(txtUsername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtusername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(txtThoiGianRa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(txtTrangThai, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(txtCheckout, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtStatus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(16, Short.MAX_VALUE))
         );
 
@@ -222,12 +219,6 @@ public class HoaDonJDialog extends javax.swing.JDialog implements HoaDonControll
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(184, 184, 184))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 594, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 17, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(btnRemove)
@@ -238,6 +229,15 @@ public class HoaDonJDialog extends javax.swing.JDialog implements HoaDonControll
                 .addGap(30, 30, 30)
                 .addComponent(btnCancel)
                 .addContainerGap())
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jScrollPane1)
+                        .addContainerGap())
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 53, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -254,7 +254,7 @@ public class HoaDonJDialog extends javax.swing.JDialog implements HoaDonControll
                     .addComponent(btnAdd)
                     .addComponent(btnCheckout)
                     .addComponent(btnCancel))
-                .addContainerGap(13, Short.MAX_VALUE))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -273,12 +273,12 @@ public class HoaDonJDialog extends javax.swing.JDialog implements HoaDonControll
 
     private void btnRemoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRemoveActionPerformed
         // TODO add your handling code here:
-        this.removeGao();
+        this.removeBill();
     }//GEN-LAST:event_btnRemoveActionPerformed
 
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
         // TODO add your handling code here:
-        this.showGaoJDialog();
+        this.showBillJDialog();
     }//GEN-LAST:event_btnAddActionPerformed
 
     private void btnCheckoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCheckoutActionPerformed
@@ -316,24 +316,26 @@ public class HoaDonJDialog extends javax.swing.JDialog implements HoaDonControll
                 }
             }
         } catch (Exception ex) {
-            java.util.logging.Logger.getLogger(HoaDonJDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(BillManagerJDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        /* Tạo đối tượng Bill mẫu */
+        // Thay số 1 bằng mã hóa đơn hợp lệ trong DB của bạn
         //</editor-fold>
         //</editor-fold>
-
-        /* Tạo đối tượng HoaDon mẫu */
-        HoaDon sampleHoaDon = HoaDon.builder()
-                .maHd(1) // Thay số 1 bằng mã hóa đơn hợp lệ trong DB của bạn
-                .username("ngocha")
-                .trangThai(0)
-                .thoiGianVao(new Timestamp(System.currentTimeMillis()))
-                .build();
+        //</editor-fold>
+        //</editor-fold>
+        /* Tạo đối tượng Bill mẫu */
+        // Thay số 1 bằng mã hóa đơn hợp lệ trong DB của bạn
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the dialog */
 
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                HoaDonJDialog dialog = new HoaDonJDialog(new javax.swing.JFrame(), true);
+                BillManagerJDialog dialog = new BillManagerJDialog(new javax.swing.JFrame(), true);
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                     @Override
                     public void windowClosing(java.awt.event.WindowEvent e) {
@@ -361,64 +363,74 @@ public class HoaDonJDialog extends javax.swing.JDialog implements HoaDonControll
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tblBillDetails;
-    private javax.swing.JTextField txtCardId;
-    private javax.swing.JTextField txtMaHD;
-    private javax.swing.JTextField txtThoiGianRa;
-    private javax.swing.JTextField txtThoiGianVao;
-    private javax.swing.JTextField txtTrangThai;
-    private javax.swing.JTextField txtUsername;
+    private javax.swing.JTextField txtCheckin;
+    private javax.swing.JTextField txtCheckout;
+    private javax.swing.JTextField txtStatus;
+    private javax.swing.JTextField txtcardId;
+    private javax.swing.JTextField txtmaHD;
+    private javax.swing.JTextField txtusername;
     // End of variables declaration//GEN-END:variables
 
         @Setter
-    HoaDon hoaDon;
-    List<ChiTietHoaDon> chiTietHoaDons = new ArrayList<>();
+    Bill Bill;
+    List<BillDetail> chiTietBills = new ArrayList<>();
 
-    HoaDonDAO hoaDonDao = new HoaDonDAOimpl();
-    ChiTietHoaDonDAO chiTietDao = new ChiTietHoaDonDAOimpl();
+    BillDAO BillDao = new BillDAOImpl() {
+        @Override
+        public List<Bill> findByCardId(Integer cardId) {
+            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        }
+
+        @Override
+        public Bill findServicingByCardId(Integer cardId) {
+            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        }
+    };
+    BillDetailDAO chiTietDao = new BillDetailDAOImpl();
 
     @Override
     public void open() {
         this.setLocationRelativeTo(null);
 
-        this.setForm(hoaDon);
-        this.fillChiTietHoaDon();
+        this.setForm(Bill);
+        this.fillChiTietBill();
     }
 
     @Override
     public void close() {
-        if (chiTietHoaDons.isEmpty()) {
-            hoaDonDao.deleteById((long) hoaDon.getMaHd());
+        if (chiTietBills.isEmpty()) {
+            BillDao.deleteById((long) Bill.getMaHd());
         }
     }
 
-    void setForm(HoaDon hd) {
+    void setForm(Bill hd) {
         if (hd == null) {
             XDialog.alert("Hóa đơn không tồn tại!");
             return;
         }
-        txtMaHD.setText(String.valueOf(hd.getMaHd()));
-        txtUsername.setText(hd.getUsername());
-        txtThoiGianVao.setText(hd.getThoiGianVao().toString());
+        txtmaHD.setText(String.valueOf(hd.getMaHd()));
+        txtusername.setText(hd.getUsername());
+        txtCheckin.setText(hd.getCheckin().toString());
 
-        String[] trangThais = {"Đang phục vụ", "Hoàn tất", "Đã hủy"};
-        txtTrangThai.setText(trangThais[hd.getTrangThai()]);
-        if (hd.getThoiGianRa() != null) {
-            txtThoiGianRa.setText(hd.getThoiGianRa().toString());
+        String[] Statuss = {"Đang phục vụ", "Hoàn tất", "Đã hủy"};
+        txtStatus.setText(Statuss[hd.getStatus()]);
+        if (hd.getCheckout() != null) {
+            txtCheckout.setText(hd.getCheckout().toString());
         }
 
-        boolean editable = (hd.getTrangThai() == 0);
+        boolean editable = (hd.getStatus() == 0);
         btnAdd.setEnabled(editable);
         btnCancel.setEnabled(editable);
         btnCheckout.setEnabled(editable);
         btnRemove.setEnabled(editable);
     }
 
-    void fillChiTietHoaDon() {
-        chiTietHoaDons = chiTietDao.findByHoaDonId((long) hoaDon.getMaHd());
+    void fillChiTietBill() {
+        chiTietBills = chiTietDao.findByBillId((long) Bill.getMaHd());
 
         DefaultTableModel model = (DefaultTableModel) tblBillDetails.getModel();
         model.setRowCount(0);
-        chiTietHoaDons.forEach(ct -> {
+        chiTietBills.forEach(ct -> {
             double rawGiamGia = ct.getGiamGia();
             System.out.println("rawGiamGia = " + rawGiamGia);
 
@@ -430,7 +442,7 @@ public class HoaDonJDialog extends javax.swing.JDialog implements HoaDonControll
             Object[] row = {
                 false,
                 ct.getMaCT(),
-                ct.getTenGao(),
+                ct.getTenMon(),
                 String.format("%,.0f", ct.getDonGia()),
                 String.format("%.0f%%", giamGia * 100),
                 ct.getSoLuong(),
@@ -440,40 +452,39 @@ public class HoaDonJDialog extends javax.swing.JDialog implements HoaDonControll
         });
     }
 
-    @Override
-    public void showGaoJDialog() {
-        DrinkJDialog dialog = new DrinkJDialog((Frame) this.getOwner(), true);
-        dialog.setHoaDon(hoaDon); // truyền hóa đơn hiện tại
+    
+    public void showBillJDialog() {
+        DrinkManagerJDialog dialog = new DrinkManagerJDialog((Frame) this.getOwner(), true);
+        dialog.setBill(Bill); // truyền hóa đơn hiện tại
         dialog.setVisible(true);
 
         dialog.addWindowListener(new java.awt.event.WindowAdapter() {
             @Override
             public void windowClosed(java.awt.event.WindowEvent e) {
-                fillChiTietHoaDon();
+                fillChiTietBill();
             }
         });
     }
 
-    @Override
-    public void removeGao() {
+    public void removeBill() {
         for (int i = 0; i < tblBillDetails.getRowCount(); i++) {
             Boolean checked = (Boolean) tblBillDetails.getValueAt(i, 0);
             if (checked) {
-                chiTietDao.deleteById((long) chiTietHoaDons.get(i).getMaCT());
+                chiTietDao.deleteById((long) chiTietBills.get(i).getMaCT());
             }
         }
-        this.fillChiTietHoaDon();
+        this.fillChiTietBill();
     }
 
     @Override
     public void updateSoLuong() {
-        if (hoaDon.getTrangThai() == 0) {
+        if (Bill.getStatus() == 0) {
             String input = XDialog.prompt("Số lượng mới?");
             if (input != null && !input.isEmpty()) {
-                ChiTietHoaDon ct = chiTietHoaDons.get(tblBillDetails.getSelectedRow());
+                BillDetail ct = chiTietBills.get(tblBillDetails.getSelectedRow());
                 ct.setSoLuong(Integer.parseInt(input));
                 chiTietDao.update(ct);
-                this.fillChiTietHoaDon();
+                this.fillChiTietBill();
             }
         }
     }
@@ -481,23 +492,28 @@ public class HoaDonJDialog extends javax.swing.JDialog implements HoaDonControll
     @Override
     public void checkout() {
         if (XDialog.confirm("Xác nhận thanh toán hóa đơn này?")) {
-            hoaDon.setTrangThai(1); // Hoàn tất
-            hoaDon.setThoiGianRa(new Timestamp(System.currentTimeMillis()));
-            hoaDonDao.update(hoaDon);
-            this.setForm(hoaDon);
+            Bill.setStatus(1); // Hoàn tất
+            Bill.setCheckout(new Timestamp(System.currentTimeMillis()));
+            BillDao.update(Bill);
+            this.setForm(Bill);
         }
     }
 
     @Override
     public void cancel() {
-        if (chiTietHoaDons.isEmpty()) {
-            hoaDonDao.deleteById((long) hoaDon.getMaHd());
+        if (chiTietBills.isEmpty()) {
+            BillDao.deleteById((long) Bill.getMaHd());
             this.dispose();
         } else if (XDialog.confirm("Bạn chắc chắn muốn hủy hóa đơn?")) {
-            hoaDon.setTrangThai(2); // Đã hủy
-            hoaDonDao.update(hoaDon);
-            this.setForm(hoaDon);
+            Bill.setStatus(2); // Đã hủy
+            BillDao.update(Bill);
+            this.setForm(Bill);
         }
+    }
+
+    @Override
+    public void setHoaDon(Bill hoadon) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
 }

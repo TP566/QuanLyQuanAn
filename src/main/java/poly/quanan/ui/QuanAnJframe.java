@@ -12,12 +12,12 @@ import poly.quanan.ui.QuanAnController;
  *
  * @author DELL
  */
-public final class PolyCafeJFrame extends javax.swing.JFrame implements QuanAnController{
+public final class QuanAnJframe extends javax.swing.JFrame implements QuanAnController{
 
 /**
  * Creates new form AppJFrame
  */
-public PolyCafeJFrame() {
+public QuanAnJframe() {
     initComponents();
     this.init();
 }
@@ -235,7 +235,6 @@ public PolyCafeJFrame() {
 
     private void btnSalesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalesActionPerformed
         // TODO add your handling code here:
-        this.showSalesJDialog(this);
     }//GEN-LAST:event_btnSalesActionPerformed
 
     private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
@@ -260,12 +259,10 @@ public PolyCafeJFrame() {
 
     private void btnUserMgrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUserMgrActionPerformed
         // TODO add your handling code here:
-        this.showUserManagerJDialog(this);
     }//GEN-LAST:event_btnUserMgrActionPerformed
 
     private void btnReportMgrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReportMgrActionPerformed
         // TODO add your handling code here:
-        this.showRevenueManagerJDialog(this);
     }//GEN-LAST:event_btnReportMgrActionPerformed
 
     /**
@@ -285,14 +282,18 @@ public PolyCafeJFrame() {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(PolyCafeJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(QuanAnJframe.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(PolyCafeJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(QuanAnJframe.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(PolyCafeJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(QuanAnJframe.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(PolyCafeJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(QuanAnJframe.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -301,7 +302,7 @@ public PolyCafeJFrame() {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new PolyCafeJFrame().setVisible(true);
+                new QuanAnJframe().setVisible(true);
             }
         });
     }

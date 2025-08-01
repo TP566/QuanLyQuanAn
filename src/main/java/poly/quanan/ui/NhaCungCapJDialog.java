@@ -4,10 +4,10 @@
  */
 package poly.quanan.ui;
 
-import gao.dao.NhaCungCapDAO;
-import gao.dao.impl.NhaCungCapDAOimpl;
-import gao.entity.NhaCungCap;
-import gao.util.XDialog;
+import poly.quanan.dao.NhaCungCapDAO;
+import poly.quanan.dao.impl.NhaCungCapDAOImpl;
+import poly.quanan.entity.NhaCungCap;
+import poly.quanan.util.XDialog;
 import java.util.List;
 import javax.swing.JOptionPane;
 import javax.swing.event.ListSelectionEvent;
@@ -72,7 +72,7 @@ public class NhaCungCapJDialog extends javax.swing.JDialog implements NhaCungCap
             }
         });
 
-        jPanel1.setBackground(new java.awt.Color(255, 241, 231));
+        jPanel1.setBackground(new java.awt.Color(204, 255, 255));
 
         tblNCC.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -82,7 +82,7 @@ public class NhaCungCapJDialog extends javax.swing.JDialog implements NhaCungCap
                 {null, null, null, null, null, null}
             },
             new String [] {
-                "Mã NCC", "Tên NCC", "Địa chỉ", "Số ĐT", "Email", ""
+                "Mã Nhà CC", "Tên Nhà CC", "Địa chỉ", "Số ĐT", "Email", ""
             }
         ) {
             Class[] types = new Class [] {
@@ -96,7 +96,6 @@ public class NhaCungCapJDialog extends javax.swing.JDialog implements NhaCungCap
         jScrollPane2.setViewportView(tblNCC);
 
         btnCheckAll.setBackground(new java.awt.Color(204, 204, 204));
-        btnCheckAll.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gao/icons/selection.png"))); // NOI18N
         btnCheckAll.setText("Chọn tất cả");
         btnCheckAll.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -105,7 +104,6 @@ public class NhaCungCapJDialog extends javax.swing.JDialog implements NhaCungCap
         });
 
         btnUncheckAll.setBackground(new java.awt.Color(204, 204, 204));
-        btnUncheckAll.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gao/icons/cancel.png"))); // NOI18N
         btnUncheckAll.setText("Bỏ chọn tất cả");
         btnUncheckAll.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -114,7 +112,6 @@ public class NhaCungCapJDialog extends javax.swing.JDialog implements NhaCungCap
         });
 
         btnDeleteCheckedItems.setBackground(new java.awt.Color(204, 204, 204));
-        btnDeleteCheckedItems.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gao/icons/delete.png"))); // NOI18N
         btnDeleteCheckedItems.setText("Xóa các mục chọn");
         btnDeleteCheckedItems.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -150,7 +147,7 @@ public class NhaCungCapJDialog extends javax.swing.JDialog implements NhaCungCap
 
         tabs.addTab("DANH SÁCH", jPanel1);
 
-        jPanel2.setBackground(new java.awt.Color(255, 241, 231));
+        jPanel2.setBackground(new java.awt.Color(204, 255, 255));
 
         btnMoveLast.setBackground(new java.awt.Color(255, 255, 204));
         btnMoveLast.setText(">|");
@@ -184,10 +181,9 @@ public class NhaCungCapJDialog extends javax.swing.JDialog implements NhaCungCap
             }
         });
 
-        jPanel11.setBackground(new java.awt.Color(255, 241, 231));
+        jPanel11.setBackground(new java.awt.Color(204, 255, 255));
 
         btnCreate.setBackground(new java.awt.Color(204, 204, 204));
-        btnCreate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gao/icons/add.png"))); // NOI18N
         btnCreate.setText("Tạo mới");
         btnCreate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -196,7 +192,6 @@ public class NhaCungCapJDialog extends javax.swing.JDialog implements NhaCungCap
         });
 
         btnDelete.setBackground(new java.awt.Color(204, 204, 204));
-        btnDelete.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gao/icons/delete.png"))); // NOI18N
         btnDelete.setText("Xóa");
         btnDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -205,7 +200,6 @@ public class NhaCungCapJDialog extends javax.swing.JDialog implements NhaCungCap
         });
 
         btnUpdate.setBackground(new java.awt.Color(204, 204, 204));
-        btnUpdate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gao/icons/update.png"))); // NOI18N
         btnUpdate.setText("Cập nhật");
         btnUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -214,7 +208,6 @@ public class NhaCungCapJDialog extends javax.swing.JDialog implements NhaCungCap
         });
 
         btnClear.setBackground(new java.awt.Color(204, 204, 204));
-        btnClear.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gao/icons/new.png"))); // NOI18N
         btnClear.setText("Làm mới");
         btnClear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -323,7 +316,7 @@ public class NhaCungCapJDialog extends javax.swing.JDialog implements NhaCungCap
                             .addComponent(jLabel5)
                             .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(156, 156, 156)))
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addContainerGap(49, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -369,7 +362,7 @@ public class NhaCungCapJDialog extends javax.swing.JDialog implements NhaCungCap
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(tabs, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 538, Short.MAX_VALUE)
+            .addComponent(tabs, javax.swing.GroupLayout.Alignment.TRAILING)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -536,14 +529,13 @@ public class NhaCungCapJDialog extends javax.swing.JDialog implements NhaCungCap
     private int currentIndex = -1;
     private DefaultTableModel tableModel;
     List<NhaCungCap> items = List.of();
-    NhaCungCapDAO dao = new NhaCungCapDAOimpl();
+    NhaCungCapDAO dao = (NhaCungCapDAO) new NhaCungCapDAOImpl();
     @Override
     public void open() {
         setVisible(true);
         fillToTable();
     }
 
-    @Override
     public void setForm(NhaCungCap entity) {
         txtMancc.setText(entity.getMaNCC() != null ? String.valueOf(entity.getMaNCC()) : "");
         txtTenncc.setText(entity.getTenNCC());
@@ -576,7 +568,6 @@ public class NhaCungCapJDialog extends javax.swing.JDialog implements NhaCungCap
         return ncc;
     }
 
-    @Override
     public void fillToTable() {
         DefaultTableModel model = (DefaultTableModel) tblNCC.getModel();
         model.setRowCount(0);
@@ -617,13 +608,14 @@ public class NhaCungCapJDialog extends javax.swing.JDialog implements NhaCungCap
 
     @Override
     public void delete() {
-        if (XDialog.confirm("Bạn thực sự muốn xóa?")) {
-            String id = txtMancc.getText();
-            dao.deleteById(Integer.valueOf(id));
-            this.fillToTable();
-            this.clear();
-        }
+    if (XDialog.confirm("Bạn thực sự muốn xóa?")) {
+        // id ở đây là String rồi, chẳng cần parse về Integer
+        String id = txtMancc.getText();
+        dao.deleteById(Integer.valueOf(id));
+        this.fillToTable();
+        this.clear();
     }
+}
 
     @Override
     public void clear() {
@@ -637,7 +629,6 @@ public class NhaCungCapJDialog extends javax.swing.JDialog implements NhaCungCap
         tblNCC.clearSelection();
     }
 
-    @Override
     public void setEditable(boolean editable) {
         txtMancc.setEditable(editable);
         txtTenncc.setEditable(editable);
@@ -671,7 +662,7 @@ public class NhaCungCapJDialog extends javax.swing.JDialog implements NhaCungCap
         if (XDialog.confirm("Bạn thực sự muốn xóa các mục chọn?")) {
             for (int i = 0; i < tblNCC.getRowCount(); i++) {
                 if ((Boolean) tblNCC.getValueAt(i, 5)) {
-                    dao.deleteById(items.get(i).getMaNCC());
+                    dao.deleteById((Integer) items.get(i).getMaNCC());
                 }
             }
             this.fillToTable();

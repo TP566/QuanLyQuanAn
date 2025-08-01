@@ -105,6 +105,7 @@ public class XJdbc {
      * @return giá trị truy vấn hoặc null
      * @throws RuntimeException không thực thi được câu lệnh SQL
      */
+    @SuppressWarnings("unchecked")
     public static <T> T getValue(String sql, Object... values) {
         try {
             var resultSet = XJdbc.executeQuery(sql, values);

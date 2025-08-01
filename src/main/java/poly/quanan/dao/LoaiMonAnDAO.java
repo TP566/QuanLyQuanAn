@@ -1,10 +1,10 @@
 package poly.quanan.dao;
 
 import poly.quanan.entity.Drink;
-import poly.quanan.entity.Category;
+import poly.quanan.entity.LoaiMonAn;
 import java.util.List;
 
-public interface CategoryDAO extends CrudDAO<Category, String> {
+public interface LoaiMonAnDAO extends CrudDAO<LoaiMonAn, String> {
 
     List<Drink> findByLoaiId(String maLoai);
 

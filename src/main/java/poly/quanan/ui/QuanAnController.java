@@ -3,11 +3,8 @@ package poly.quanan.ui;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
 import poly.quanan.ui.manager.BillManagerJDialog;
-import poly.quanan.ui.manager.CardManagerJDialog;
-import poly.quanan.ui.manager.CategoryManagerJDialog;
+import poly.quanan.ui.manager.LoaiMonAnManagerJDialog;
 import poly.quanan.ui.manager.DrinkManagerJDialog;
-import poly.quanan.ui.manager.RevenueManagerJDialog;
-import poly.quanan.ui.manager.UserManagerJDialog;
 import poly.quanan.util.XDialog;
 
 public interface QuanAnController {
@@ -37,9 +34,6 @@ public interface QuanAnController {
     default void showChangePasswordJDialog(JFrame frame){
         this.showJDialog(new ChangePasswordJDialog(frame, true));
     }
-    default void showSalesJDialog(JFrame frame){
-        this.showJDialog(new SalesJDialog(frame, true));
-    }
     default void showHistoryJDialog(JFrame frame){
         this.showJDialog(new HistoryJDialog(frame, true));
     }
@@ -48,21 +42,11 @@ public interface QuanAnController {
         this.showJDialog(new DrinkManagerJDialog(frame, true));
     }
     default void showCategoryManagerJDialog(JFrame frame){
-        this.showJDialog(new CategoryManagerJDialog(frame, true));
-    }
-    default void showCardManagerJDialog(JFrame frame){
-        this.showJDialog(new CardManagerJDialog(frame, true));
+        this.showJDialog(new LoaiMonAnManagerJDialog(frame, true));
     }
     default void showBillManagerJDialog(JFrame frame){
         this.showJDialog(new BillManagerJDialog(frame, true));
-    }
-    default void showUserManagerJDialog(JFrame frame){
-        this.showJDialog(new UserManagerJDialog(frame, true));
-    }
-    default void showRevenueManagerJDialog(JFrame frame){
-        this.showJDialog(new RevenueManagerJDialog(frame, true));
-    }
-    
+    }  
     default void showNhaCungCapJDialog(JFrame frame) {
         this.showJDialog(new NhaCungCapJDialog(frame, true));
     }

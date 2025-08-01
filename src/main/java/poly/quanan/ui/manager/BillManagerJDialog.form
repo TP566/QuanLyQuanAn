@@ -39,7 +39,7 @@
     <Container class="javax.swing.JPanel" name="jPanel1">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+          <Color blue="ff" green="ff" red="cc" type="rgb"/>
         </Property>
       </Properties>
 
@@ -51,14 +51,6 @@
                   <Component id="jLabel1" min="-2" pref="187" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="184" max="-2" attributes="0"/>
               </Group>
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jScrollPane1" min="-2" pref="594" max="-2" attributes="0"/>
-                      <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="0" pref="17" max="32767" attributes="0"/>
-              </Group>
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="btnRemove" min="-2" max="-2" attributes="0"/>
@@ -69,6 +61,19 @@
                   <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                   <Component id="btnCancel" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Component id="jScrollPane1" max="32767" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="53" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
               </Group>
           </Group>
         </DimensionLayout>
@@ -88,7 +93,7 @@
                       <Component id="btnCheckout" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="btnCancel" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="13" max="32767" attributes="0"/>
+                  <EmptySpace pref="24" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -195,7 +200,7 @@
         <Container class="javax.swing.JPanel" name="jPanel2">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="eb" green="f3" red="ff" type="rgb"/>
+              <Color blue="ff" green="ff" red="cc" type="rgb"/>
             </Property>
           </Properties>
 
@@ -205,23 +210,23 @@
                   <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="txtUsername" alignment="0" min="-2" pref="182" max="-2" attributes="0"/>
-                          <Component id="txtMaHD" alignment="0" min="-2" pref="182" max="-2" attributes="0"/>
+                          <Component id="txtusername" alignment="0" min="-2" pref="182" max="-2" attributes="0"/>
+                          <Component id="txtmaHD" alignment="0" min="-2" pref="182" max="-2" attributes="0"/>
                           <Component id="jLabel13" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel7" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jLabel14" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtTrangThai" min="-2" pref="182" max="-2" attributes="0"/>
-                          <Component id="txtCardId" alignment="0" min="-2" pref="182" max="-2" attributes="0"/>
+                          <Component id="txtStatus" min="-2" pref="182" max="-2" attributes="0"/>
+                          <Component id="txtcardId" alignment="0" min="-2" pref="182" max="-2" attributes="0"/>
                           <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="18" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="txtThoiGianVao" alignment="0" min="-2" pref="182" max="-2" attributes="0"/>
+                          <Component id="txtCheckin" alignment="0" min="-2" pref="182" max="-2" attributes="0"/>
                           <Component id="jLabel9" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtThoiGianRa" alignment="0" min="-2" pref="182" max="-2" attributes="0"/>
+                          <Component id="txtCheckout" alignment="0" min="-2" pref="182" max="-2" attributes="0"/>
                           <Component id="jLabel15" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -241,10 +246,10 @@
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="txtMaHD" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtmaHD" alignment="1" min="-2" max="-2" attributes="0"/>
                           <Group type="103" alignment="1" groupAlignment="3" attributes="0">
-                              <Component id="txtThoiGianVao" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtCardId" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtCheckin" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtcardId" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -257,10 +262,10 @@
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="txtUsername" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtusername" alignment="1" min="-2" max="-2" attributes="0"/>
                           <Group type="103" alignment="1" groupAlignment="3" attributes="0">
-                              <Component id="txtThoiGianRa" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtTrangThai" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtCheckout" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtStatus" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace pref="16" max="32767" attributes="0"/>
@@ -269,7 +274,7 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JTextField" name="txtUsername">
+            <Component class="javax.swing.JTextField" name="txtusername">
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel15">
               <Properties>
@@ -281,7 +286,7 @@
                 <Property name="text" type="java.lang.String" value="M&#xe3; phi&#x1ebf;u "/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="txtTrangThai">
+            <Component class="javax.swing.JTextField" name="txtStatus">
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel9">
               <Properties>
@@ -293,18 +298,18 @@
                 <Property name="text" type="java.lang.String" value="Th&#x1ebb; s&#x1ed1; "/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="txtThoiGianVao">
+            <Component class="javax.swing.JTextField" name="txtCheckin">
             </Component>
-            <Component class="javax.swing.JTextField" name="txtCardId">
+            <Component class="javax.swing.JTextField" name="txtcardId">
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel13">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Nh&#xe2;n vi&#xea;n "/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="txtThoiGianRa">
+            <Component class="javax.swing.JTextField" name="txtCheckout">
             </Component>
-            <Component class="javax.swing.JTextField" name="txtMaHD">
+            <Component class="javax.swing.JTextField" name="txtmaHD">
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel14">
               <Properties>

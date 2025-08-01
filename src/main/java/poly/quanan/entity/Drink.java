@@ -10,13 +10,27 @@ import lombok.NoArgsConstructor;
 @Builder
 @Data
 public class Drink {
-    private int DrinkId;
+    /** Khóa chính (sinh tự động bởi XStr.getKey()) */
+    private String DrinkId;
+
+    /** Tên đồ uống */
     private String DrinkName;
+
+    /** Nguồn gốc / hình ảnh */
     private String Origin;
-    private double Price;
+
+    /** Giá bán */
+    private double price;
+
+    /** Đơn vị tính */
     private String Unit;
+
+    /** Số lượng tồn kho */
     private int StockQuantity;
+
+    /** Mã loại (FK) */
     private String CategoryId;
+
+    /** Phần trăm giảm giá (0–1 hoặc 0–100 tuỳ cách lưu) */
     private double Discount;
 }
-

@@ -20,15 +20,25 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author lengh
  */
-public class LichSuJDialog extends javax.swing.JDialog implements LichSuController {
+public class HistoryJDialog extends javax.swing.JDialog implements HistoryController {
 
-    BillDAO BillDao = new BillDAOImpl();
+    BillDAO BillDao = new BillDAOImpl() {
+        @Override
+        public List<Bill> findByCardId(Integer cardId) {
+            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        }
+
+        @Override
+        public Bill findServicingByCardId(Integer cardId) {
+            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        }
+    };
     List<Bill> bills = List.of();
 
     /**
      * Creates new form LichSuJDialog
      */
-    public LichSuJDialog(java.awt.Frame parent, boolean modal) {
+    public HistoryJDialog(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
     }
@@ -59,7 +69,7 @@ public class LichSuJDialog extends javax.swing.JDialog implements LichSuControll
             }
         });
 
-        jPanel1.setBackground(new java.awt.Color(204, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(255, 243, 235));
 
         tblBills.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -182,21 +192,23 @@ public class LichSuJDialog extends javax.swing.JDialog implements LichSuControll
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(LichSuJDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(HistoryJDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(LichSuJDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(HistoryJDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(LichSuJDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(HistoryJDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(LichSuJDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(HistoryJDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                LichSuJDialog dialog = new LichSuJDialog(new javax.swing.JFrame(), true);
+                HistoryJDialog dialog = new HistoryJDialog(new javax.swing.JFrame(), true);
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                     @Override
                     public void windowClosing(java.awt.event.WindowEvent e) {
@@ -227,30 +239,32 @@ public class LichSuJDialog extends javax.swing.JDialog implements LichSuControll
         setTitle("Lịch sử bán hàng");
     }
 
-    @Override
-    public void fillBills() {
-        String username = (String) XAuth.user.getUsername();
-        java.util.Date utilBegin = XDate.parse(txtBegin.getText(), "MM/dd/yyyy");
-        java.util.Date utilEnd = XDate.parse(txtEnd.getText(), "MM/dd/yyyy");
+@Override
+public void fillBills() {
+    String username = XAuth.user.getUsername();
+    java.util.Date utilBegin = XDate.parse(txtBegin.getText(), "MM/dd/yyyy");
+    java.util.Date utilEnd = XDate.parse(txtEnd.getText(), "MM/dd/yyyy");
 
-        java.sql.Date begin = new java.sql.Date(utilBegin.getTime());
-        java.sql.Date end = new java.sql.Date(utilEnd.getTime());
+    java.sql.Date begin = new java.sql.Date(utilBegin.getTime());
+    java.sql.Date end = new java.sql.Date(utilEnd.getTime());
 
-        bills = BillDao.findByUserAndTimeRange(username, begin, end);
-        DefaultTableModel model = (DefaultTableModel) tblBills.getModel();
-        model.setRowCount(0);
-        String[] statuses = {"Servicing", "Completed", "Canceled"};
-        bills.forEach(b -> {
-            Object[] row = {
-                b.getMaHd(),
-                "Card #" + b.getCardId(),
-                XDate.format(b.getCheckin(), "HH:mm:ss dd-MM-yyyy"),
-                XDate.format(b.getCheckout(), "HH:mm:ss dd-MM-yyyy"),
-                statuses[b.getStatus()]
-            };
-            model.addRow(row);
-        });
-    }
+    bills = BillDao.findByUserAndTimeRange(username, begin, end);
+    DefaultTableModel model = (DefaultTableModel) tblBills.getModel();
+    model.setRowCount(0);
+
+    String[] statuses = {"Servicing", "Completed", "Canceled"};
+    bills.forEach(b -> {
+        Object[] row = {
+            b.getMaHd(),
+            "Card #" + b.getCardId(),
+            XDate.format(b.getCheckout(), "HH:mm:ss dd-MM-yyyy"),
+            XDate.format(b.getCheckin(), "HH:mm:ss dd-MM-yyyy"),
+            statuses[b.getStatus()]
+        };
+        model.addRow(row);
+    });
+}
+
 
     @Override
     public void showBillJDialog() {
@@ -261,7 +275,7 @@ public class LichSuJDialog extends javax.swing.JDialog implements LichSuControll
         dialog.addWindowListener(new java.awt.event.WindowAdapter() {
             @Override
             public void windowClosed(java.awt.event.WindowEvent e) {
-                LichSuJDialog.this.fillBills();
+                HistoryJDialog.this.fillBills();
             }
         });
     }

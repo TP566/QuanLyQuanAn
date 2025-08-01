@@ -4,5 +4,5 @@ import poly.quanan.entity.Drink;
 import java.util.List;
 
 public interface DrinkDAO extends CrudDAO<Drink, String> {
-    List<Drink> findByLoaiId(String maLoai);
+    List<Drink> findByCategoryId (String maLoai);
 }

@@ -4,13 +4,29 @@
  */
 package poly.quanan.ui;
 
-import gao.entity.NhaCungCap;
-import gao.ui.manager.CrudController;
+
+import poly.quanan.entity.NhaCungCap;
+import poly.quanan.ui.manager.CrudController;
 
 /**
  *
  * @author lengh
  */
-public interface NhaCungCapController extends CrudController<NhaCungCap>{
-    
+public interface NhaCungCapController {
+   void open();
+    void create();
+    void update();
+    void delete();
+    void clear();
+
+    void checkAll();
+    void uncheckAll();
+    void deleteCheckedItems();
+
+    void moveFirst();
+    void movePrevious();
+    void moveNext();
+    void moveLast();
+    void moveTo(int rowIndex);
+    void edit();
 }

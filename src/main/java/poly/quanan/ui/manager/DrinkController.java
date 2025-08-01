@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
  */
-package poly.quanan.ui;
+package poly.quanan.ui.manager;
 
 import poly.quanan.entity.Bill;
 
@@ -21,5 +21,9 @@ public interface DrinkController {
     void fillDrink(); // tải và hiển thị đồ uống
 
     void addDrinkToBill(); // thêm đồ uống vào
+    
+    void fillCategories();
+    
+    void chooseFile();
 }
 

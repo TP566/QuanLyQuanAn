@@ -4,13 +4,11 @@
  */
 package poly.quanan.ui;
 
-import poly.quanan.dao.CrudDAO;
-
 /**
  *
  * @author lengh
  */
-public interface LichSuController {
+public interface HistoryController {
 
     void open(); // hiển thị bill theo khoảng thời gian Hôm nay
 
