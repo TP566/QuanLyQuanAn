@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+    xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+                        http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.poly</groupId>
+  <artifactId>PolyQuanAn</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <properties>
+    <!-- Đảm bảo mã nguồn UTF-8 -->
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <!-- Sử dụng Java 21 -->
+    <maven.compiler.release>21</maven.compiler.release>
+  </properties>
+
+  <dependencies>
+    <!-- Lombok để tự động tạo getter/setter -->
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>1.18.34</version>
+      <scope>provided</scope>
+    </dependency>
+
+    <!-- Driver JDBC cho SQL Server -->
+    <dependency>
+      <groupId>com.microsoft.sqlserver</groupId>
+      <artifactId>mssql-jdbc</artifactId>
+      <version>11.2.1.jre17</version>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <resources>
+      <!-- Bao gồm cả ảnh, icon, và các file resource khác trong src/main/java -->
+      <resource>
+        <directory>src/main/java</directory>
+        <includes>
+          <include>**/*.png</include>
+          <include>**/*.jpg</include>
+          <include>**/*.properties</include>
+          <include>**/*.xml</include>
+        </includes>
+      </resource>
+    </resources>
+
+    <plugins>
+      <!-- Plugin để chạy trực tiếp class main -->
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <version>3.1.0</version>
+        <configuration>
+          <mainClass>poly.quanan.ui.QuanAnJFrame</mainClass>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>
