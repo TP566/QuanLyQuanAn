@@ -9,46 +9,55 @@ import poly.quanan.util.XQuery;
 
 public class LoaiMonAnDAOImpl implements LoaiMonAnDAO {
 
-    private final String createSql = "INSERT INTO POLY_QUAN_AN_Category(Id, Name) VALUES(?, ?)";
-    private final String updateSql = "UPDATE POLY_QUAN_AN_Category SET Name=? WHERE Id=?";
-    private final String deleteByIdSql = "DELETE FROM POLY_QUAN_AN_Category WHERE Id=?";
-    private final String findAllSql = "SELECT * FROM POLY_QUAN_AN_Category";
-    private final String findByIdSql = "SELECT * FROM POLY_QUAN_AN_Category WHERE Id=?";
+    private static final String INSERT_SQL = 
+        "INSERT INTO Category(MaDanhMuc, TenDanhMuc) VALUES(?, ?)";
+    private static final String UPDATE_SQL = 
+        "UPDATE Category SET TenDanhMuc=? WHERE MaDanhMuc=?";
+    private static final String DELETE_SQL = 
+        "DELETE FROM Category WHERE MaDanhMuc=?";
+    private static final String SELECT_ALL_SQL = 
+        "SELECT * FROM Category";
+    private static final String SELECT_BY_ID_SQL = 
+        "SELECT * FROM Category WHERE MaDanhMuc=?";
+    private static final String SELECT_DRINK_BY_CATEGORY_SQL = 
+        "SELECT * FROM Drink WHERE DrinkId=?";
 
+    @Override
     public LoaiMonAn create(LoaiMonAn entity) {
-        Object[] values = {
-            entity.getMaDanhMuc(),
+        XJdbc.executeUpdate(
+            INSERT_SQL, 
+            entity.getMaDanhMuc(), 
             entity.getTenDanhMuc()
-        };
-        XJdbc.executeUpdate(createSql, values);
+        );
         return entity;
     }
 
+    @Override
     public void update(LoaiMonAn entity) {
-        Object[] values = {
-            entity.getTenDanhMuc(),
+        XJdbc.executeUpdate(
+            UPDATE_SQL, 
+            entity.getTenDanhMuc(), 
             entity.getMaDanhMuc()
-        };
-        XJdbc.executeUpdate(updateSql, values);
+        );
     }
 
     @Override
     public void deleteById(String id) {
-        XJdbc.executeUpdate(deleteByIdSql, id);
+        XJdbc.executeUpdate(DELETE_SQL, id);
     }
 
     @Override
     public List<LoaiMonAn> findAll() {
-        return XQuery.getBeanList(LoaiMonAn.class, findAllSql);
+        return XQuery.getBeanList(LoaiMonAn.class, SELECT_ALL_SQL);
     }
 
     @Override
     public LoaiMonAn findById(String id) {
-        return XQuery.getSingleBean(LoaiMonAn.class, findByIdSql, id);
+        return XQuery.getSingleBean(LoaiMonAn.class, SELECT_BY_ID_SQL, id);
     }
 
     @Override
-    public List<Drink> findByLoaiId(String maLoai) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public List<Drink> findByLoaiId(String maDanhMuc) {
+        return XQuery.getBeanList(Drink.class, SELECT_DRINK_BY_CATEGORY_SQL, maDanhMuc);
     }
 }

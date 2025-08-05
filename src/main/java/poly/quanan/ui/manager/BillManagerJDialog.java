@@ -117,7 +117,7 @@ public class BillManagerJDialog extends javax.swing.JDialog implements BillContr
                 {null, null, null, null, null, null, null}
             },
             new String [] {
-                "", "Mã phiếu ", "Đồ uống ", "Đơn giá ", "Giảm giá ", "Số lượng ", "Thành tiền "
+                "", "Mã phiếu ", "Đồ ăn/uống ", "Đơn giá ", "Giảm giá ", "Số lượng ", "Thành tiền "
             }
         ) {
             Class[] types = new Class [] {
@@ -450,7 +450,7 @@ public class BillManagerJDialog extends javax.swing.JDialog implements BillContr
 
     
     public void showBillJDialog() {
-        DrinkManagerJDialog1 dialog = new DrinkManagerJDialog1((Frame) this.getOwner(), true);
+        DrinkManagerJDialog dialog = new DrinkManagerJDialog((Frame) this.getOwner(), true);
         dialog.setBill(Bill); // truyền hóa đơn hiện tại
         dialog.setVisible(true);
 

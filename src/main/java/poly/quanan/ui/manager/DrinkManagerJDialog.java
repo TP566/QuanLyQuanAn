@@ -110,7 +110,7 @@ public class DrinkManagerJDialog extends javax.swing.JDialog implements DrinkCon
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.String.class, java.lang.Boolean.class
+                java.lang.Object.class, java.lang.Integer.class, java.lang.String.class, java.lang.Double.class, java.lang.Double.class, java.lang.String.class, java.lang.Integer.class, java.lang.Boolean.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -418,7 +418,7 @@ public class DrinkManagerJDialog extends javax.swing.JDialog implements DrinkCon
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(tabs, javax.swing.GroupLayout.DEFAULT_SIZE, 397, Short.MAX_VALUE)
+            .addComponent(tabs)
         );
 
         pack();
@@ -808,7 +808,7 @@ public class DrinkManagerJDialog extends javax.swing.JDialog implements DrinkCon
 
     @Override
     public void addDrinkToBill() {
-        DrinkManagerJDialog1 dlg = new DrinkManagerJDialog1((Frame) getOwner(), true);
+        DrinkManagerJDialog dlg = new DrinkManagerJDialog((Frame) getOwner(), true);
         dlg.setBill(bill);
         dlg.setVisible(true);
         // sau khi đóng dialog, load lại bảng

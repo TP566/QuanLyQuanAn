@@ -4,7 +4,7 @@ import javax.swing.JDialog;
 import javax.swing.JFrame;
 import poly.quanan.ui.manager.BillManagerJDialog;
 import poly.quanan.ui.manager.LoaiMonAnManagerJDialog;
-import poly.quanan.ui.manager.DrinkManagerJDialog1;
+import poly.quanan.ui.manager.DrinkManagerJDialog;
 import poly.quanan.ui.manager.UserManagerJDialog;
 import poly.quanan.util.XDialog;
 
@@ -44,7 +44,7 @@ public interface QuanAnController {
     }
 
     default void showDrinkManagerJDialog(JFrame frame) {
-        this.showJDialog(new DrinkManagerJDialog1(frame, true));
+        this.showJDialog(new DrinkManagerJDialog(frame, true));
     }
 
     default void showCategoryManagerJDialog(JFrame frame) {
