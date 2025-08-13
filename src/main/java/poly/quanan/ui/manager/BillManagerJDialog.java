@@ -400,10 +400,7 @@ public class BillManagerJDialog extends javax.swing.JDialog implements BillContr
     }
 
     void setForm(Bill hd) {
-        if (hd == null) {
-            XDialog.alert("Hóa đơn không tồn tại!");
-            return;
-        }
+        
         txtmaHD.setText(String.valueOf(hd.getMaHd()));
         txtusername.setText(hd.getUsername());
         txtCheckin.setText(hd.getCheckin().toString());
