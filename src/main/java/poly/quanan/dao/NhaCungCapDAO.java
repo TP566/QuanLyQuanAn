@@ -6,10 +6,7 @@ package poly.quanan.dao;
 
 import java.util.List;
 import poly.quanan.entity.NhaCungCap;
-<<<<<<< HEAD
 
-=======
->>>>>>> 059eae8 (Cập nhật code)
 /**
  *
  * @author ThanhTung

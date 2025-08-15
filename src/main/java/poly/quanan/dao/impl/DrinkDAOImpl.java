@@ -8,7 +8,6 @@ import java.util.List;
 
 public class DrinkDAOImpl implements DrinkDAO {
 
-<<<<<<< HEAD
     private static final String INSERT_SQL =
         "INSERT INTO Drink(DrinkName, Origin, Price, Unit, StockQuantity, CategoryId, Discount) " +
         "VALUES (?, ?, ?, ?, ?, ?, ?)";
@@ -33,7 +32,6 @@ public class DrinkDAOImpl implements DrinkDAO {
         SELECT_ALL_SQL + " WHERE DrinkId=?";
     private static final String SELECT_BY_CATEGORY_SQL =
         SELECT_ALL_SQL + " WHERE CategoryId=?";
-=======
     private static final String INSERT_SQL
             = "INSERT INTO Drink(DrinkName, Origin, Price, Unit, StockQuantity, CategoryId, Discount) "
             + "VALUES (?, ?, ?, ?, ?, ?, ?)";
