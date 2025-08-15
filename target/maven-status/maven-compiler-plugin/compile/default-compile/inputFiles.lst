@@ -1,10 +1,18 @@
 D:\IT\Java\PolyQuanAn\src\main\java\com\poly\polyquanan\PolyQuanAn.java
 D:\IT\Java\PolyQuanAn\src\main\java\poly\quanan\dao\BillDAO.java
 D:\IT\Java\PolyQuanAn\src\main\java\poly\quanan\dao\BillDetailDAO.java
+<<<<<<< HEAD
+=======
+D:\IT\Java\PolyQuanAn\src\main\java\poly\quanan\dao\CardDAO.java
+>>>>>>> 059eae8 (Cập nhật code)
 D:\IT\Java\PolyQuanAn\src\main\java\poly\quanan\dao\CrudDAO.java
 D:\IT\Java\PolyQuanAn\src\main\java\poly\quanan\dao\DrinkDAO.java
 D:\IT\Java\PolyQuanAn\src\main\java\poly\quanan\dao\impl\BillDAOImpl.java
 D:\IT\Java\PolyQuanAn\src\main\java\poly\quanan\dao\impl\BillDetailDAOImpl.java
+<<<<<<< HEAD
+=======
+D:\IT\Java\PolyQuanAn\src\main\java\poly\quanan\dao\impl\CardDAOimpl.java
+>>>>>>> 059eae8 (Cập nhật code)
 D:\IT\Java\PolyQuanAn\src\main\java\poly\quanan\dao\impl\DrinkDAOImpl.java
 D:\IT\Java\PolyQuanAn\src\main\java\poly\quanan\dao\impl\FoodDAOImpl.java
 D:\IT\Java\PolyQuanAn\src\main\java\poly\quanan\dao\impl\LoaiMonAnDAOImpl.java
@@ -17,6 +25,10 @@ D:\IT\Java\PolyQuanAn\src\main\java\poly\quanan\dao\RevenueDAO.java
 D:\IT\Java\PolyQuanAn\src\main\java\poly\quanan\dao\UserDAO.java
 D:\IT\Java\PolyQuanAn\src\main\java\poly\quanan\entity\Bill.java
 D:\IT\Java\PolyQuanAn\src\main\java\poly\quanan\entity\BillDetail.java
+<<<<<<< HEAD
+=======
+D:\IT\Java\PolyQuanAn\src\main\java\poly\quanan\entity\Card.java
+>>>>>>> 059eae8 (Cập nhật code)
 D:\IT\Java\PolyQuanAn\src\main\java\poly\quanan\entity\Drink.java
 D:\IT\Java\PolyQuanAn\src\main\java\poly\quanan\entity\Food.java
 D:\IT\Java\PolyQuanAn\src\main\java\poly\quanan\entity\LoaiMonAn.java
@@ -44,6 +56,11 @@ D:\IT\Java\PolyQuanAn\src\main\java\poly\quanan\ui\NhaCungCapController.java
 D:\IT\Java\PolyQuanAn\src\main\java\poly\quanan\ui\NhaCungCapJDialog.java
 D:\IT\Java\PolyQuanAn\src\main\java\poly\quanan\ui\QuanAnController.java
 D:\IT\Java\PolyQuanAn\src\main\java\poly\quanan\ui\QuanAnJFrame.java
+<<<<<<< HEAD
+=======
+D:\IT\Java\PolyQuanAn\src\main\java\poly\quanan\ui\SalesController.java
+D:\IT\Java\PolyQuanAn\src\main\java\poly\quanan\ui\SalesJDialog.java
+>>>>>>> 059eae8 (Cập nhật code)
 D:\IT\Java\PolyQuanAn\src\main\java\poly\quanan\ui\WelcomeController.java
 D:\IT\Java\PolyQuanAn\src\main\java\poly\quanan\ui\WelcomeJDialog.java
 D:\IT\Java\PolyQuanAn\src\main\java\poly\quanan\util\TimeRange.java

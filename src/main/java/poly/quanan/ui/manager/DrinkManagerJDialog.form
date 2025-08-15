@@ -23,12 +23,20 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
+<<<<<<< HEAD
           <Component id="tabs" alignment="0" max="32767" attributes="0"/>
+=======
+          <Component id="tabs" min="-2" pref="838" max="-2" attributes="0"/>
+>>>>>>> 059eae8 (Cập nhật code)
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
+<<<<<<< HEAD
           <Component id="tabs" alignment="0" max="32767" attributes="0"/>
+=======
+          <Component id="tabs" alignment="0" pref="446" max="32767" attributes="0"/>
+>>>>>>> 059eae8 (Cập nhật code)
       </Group>
     </DimensionLayout>
   </Layout>
@@ -55,11 +63,18 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
+<<<<<<< HEAD
                       <Component id="jScrollPane2" pref="141" max="32767" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jScrollPane1" alignment="0" min="-2" pref="583" max="-2" attributes="0"/>
                           <Group type="102" alignment="1" attributes="0">
+=======
+                      <Component id="jScrollPane2" min="-2" pref="161" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace max="32767" attributes="0"/>
+>>>>>>> 059eae8 (Cập nhật code)
                               <Component id="btnCheckAll1" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="btnUncheckAll1" min="-2" max="-2" attributes="0"/>
@@ -67,6 +82,14 @@
                               <Component id="btnDeleteCheckedItems1" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                           </Group>
+<<<<<<< HEAD
+=======
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="jScrollPane1" min="-2" pref="663" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                          </Group>
+>>>>>>> 059eae8 (Cập nhật code)
                       </Group>
                   </Group>
               </Group>
@@ -101,7 +124,11 @@
                   <Properties>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                       <Table columnCount="8" rowCount="4">
+<<<<<<< HEAD
                         <Column editable="true" title="Lo&#x1ea1;i &#x111;&#x1ed3; u&#xf4;ng" type="java.lang.Object"/>
+=======
+                        <Column editable="true" title="Lo&#x1ea1;i &#x111;&#x1ed3; u&#xf4;ng" type="java.lang.String"/>
+>>>>>>> 059eae8 (Cập nhật code)
                         <Column editable="true" title="M&#xe3; &#x111;&#x1ed3; u&#x1ed1;ng" type="java.lang.Integer"/>
                         <Column editable="true" title="T&#xea;n &#x111;&#x1ed3; u&#x1ed1;ng" type="java.lang.String"/>
                         <Column editable="true" title="Gi&#x1ea3;m gi&#xe1;" type="java.lang.Double"/>
@@ -176,9 +203,24 @@
                   <Properties>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                       <Table columnCount="1" rowCount="4">
+<<<<<<< HEAD
                         <Column editable="true" title="Lo&#x1ea1;i &#x110;&#x1ed3; U&#x1ed1;ng" type="java.lang.Object"/>
                       </Table>
                     </Property>
+=======
+                        <Column editable="true" title="Lo&#x1ea1;i &#x110;&#x1ed3; U&#x1ed1;ng" type="java.lang.String"/>
+                      </Table>
+                    </Property>
+                    <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+                      <TableColumnModel selectionModel="0">
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                          <Title/>
+                          <Editor/>
+                          <Renderer/>
+                        </Column>
+                      </TableColumnModel>
+                    </Property>
+>>>>>>> 059eae8 (Cập nhật code)
                     <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
                       <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
                     </Property>

@@ -27,7 +27,11 @@ import poly.quanan.entity.Bill;
  *
  * @author admin
  */
+<<<<<<< HEAD
 public class DrinkManagerJDialog extends javax.swing.JDialog implements DrinkController{
+=======
+public class DrinkManagerJDialog extends javax.swing.JDialog implements DrinkController {
+>>>>>>> 059eae8 (Cập nhật code)
 
     private Bill bill;
     private JFileChooser fileChooser = new JFileChooser();
@@ -110,7 +114,11 @@ public class DrinkManagerJDialog extends javax.swing.JDialog implements DrinkCon
             }
         ) {
             Class[] types = new Class [] {
+<<<<<<< HEAD
                 java.lang.Object.class, java.lang.Integer.class, java.lang.String.class, java.lang.Double.class, java.lang.Double.class, java.lang.String.class, java.lang.Integer.class, java.lang.Boolean.class
+=======
+                java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.Double.class, java.lang.Double.class, java.lang.String.class, java.lang.Integer.class, java.lang.Boolean.class
+>>>>>>> 059eae8 (Cập nhật code)
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -134,7 +142,19 @@ public class DrinkManagerJDialog extends javax.swing.JDialog implements DrinkCon
             new String [] {
                 "Loại Đồ Uống"
             }
+<<<<<<< HEAD
         ));
+=======
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+>>>>>>> 059eae8 (Cập nhật code)
         tblCategories.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tblCategoriesMouseClicked(evt);
@@ -171,17 +191,32 @@ public class DrinkManagerJDialog extends javax.swing.JDialog implements DrinkCon
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+<<<<<<< HEAD
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 583, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+=======
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+>>>>>>> 059eae8 (Cập nhật code)
                         .addComponent(btnCheckAll1)
                         .addGap(18, 18, 18)
                         .addComponent(btnUncheckAll1)
                         .addGap(18, 18, 18)
                         .addComponent(btnDeleteCheckedItems1)
+<<<<<<< HEAD
                         .addGap(26, 26, 26))))
+=======
+                        .addGap(26, 26, 26))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 663, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+>>>>>>> 059eae8 (Cập nhật code)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -414,11 +449,19 @@ public class DrinkManagerJDialog extends javax.swing.JDialog implements DrinkCon
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+<<<<<<< HEAD
             .addComponent(tabs)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(tabs)
+=======
+            .addComponent(tabs, javax.swing.GroupLayout.PREFERRED_SIZE, 838, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(tabs, javax.swing.GroupLayout.DEFAULT_SIZE, 446, Short.MAX_VALUE)
+>>>>>>> 059eae8 (Cập nhật code)
         );
 
         pack();
@@ -574,7 +617,12 @@ public class DrinkManagerJDialog extends javax.swing.JDialog implements DrinkCon
     private javax.swing.JTextField txtStockQuantity;
     private javax.swing.JTextField txtUnit;
     // End of variables declaration//GEN-END:variables
+<<<<<<< HEAD
             @Override
+=======
+
+    @Override
+>>>>>>> 059eae8 (Cập nhật code)
     public void setBill(Bill bill) {
         this.bill = bill;
     }
@@ -609,6 +657,7 @@ public class DrinkManagerJDialog extends javax.swing.JDialog implements DrinkCon
     public void fillToTable() {
         DefaultTableModel model = (DefaultTableModel) tblDrinks.getModel();
         model.setRowCount(0);
+<<<<<<< HEAD
         LoaiMonAn cat = categories.get(tblCategories.getSelectedRow());
         items = drinkDao.findByCategoryId(cat.getMaDanhMuc());
         items.forEach(d -> model.addRow(new Object[]{
@@ -623,10 +672,40 @@ public class DrinkManagerJDialog extends javax.swing.JDialog implements DrinkCon
             null // icon placeholder
         }));
     }
+=======
+
+        int sel = tblCategories.getSelectedRow();
+        if (categories == null || categories.isEmpty()) {
+            return;
+        }
+        LoaiMonAn cat = sel >= 0 ? categories.get(sel) : categories.get(0);
+
+        items = drinkDao.findByCategoryId(cat.getMaDanhMuc());
+        for (Drink d : items) {
+            // CHỈ đưa số thô vào cột số
+            model.addRow(new Object[]{
+                d.getDrinkId(),
+                d.getDrinkName(),
+                d.getOrigin(),
+                d.getPrice(), // Double
+                d.getUnit(),
+                d.getStockQuantity(), // Integer
+                d.getCategoryId(),
+                d.getDiscount(), // Double
+                null // icon placeholder
+            });
+        }
+    }
+    
+>>>>>>> 059eae8 (Cập nhật code)
 
     @Override
     public void open() {
         this.setLocationRelativeTo(null);
+<<<<<<< HEAD
+=======
+        this.fillCategories();
+>>>>>>> 059eae8 (Cập nhật code)
         this.fillToTable();
         this.clear();
         setTitle("Quản lý quán ăn");
@@ -653,6 +732,7 @@ public class DrinkManagerJDialog extends javax.swing.JDialog implements DrinkCon
 
     public Drink getForm() {
         Drink d = new Drink();
+<<<<<<< HEAD
         d.setDrinkId(txtDrinkId.getText());
         d.setDrinkName(txtDrinkName.getText());
         d.setPrice(Double.parseDouble(txtPrice.getText()));
@@ -661,6 +741,16 @@ public class DrinkManagerJDialog extends javax.swing.JDialog implements DrinkCon
         LoaiMonAn cat = (LoaiMonAn) cboLoaiMonAn.getSelectedItem();
         d.setCategoryId(cat.getMaDanhMuc());
         d.setDiscount(Double.parseDouble(txtDiscount.getText()));
+=======
+        d.setDrinkId(txtDrinkId.getText().trim());
+        d.setDrinkName(txtDrinkName.getText().trim());
+        d.setPrice(txtPrice.getText().isBlank() ? 0d : Double.parseDouble(txtPrice.getText().trim()));
+        d.setUnit(txtUnit.getText().trim());
+        d.setStockQuantity(txtStockQuantity.getText().isBlank() ? 0 : Integer.parseInt(txtStockQuantity.getText().trim()));
+        LoaiMonAn cat = (LoaiMonAn) cboLoaiMonAn.getSelectedItem();
+        d.setCategoryId(cat != null ? cat.getMaDanhMuc() : null);
+        d.setDiscount(txtDiscount.getText().isBlank() ? 0d : Double.parseDouble(txtDiscount.getText().trim()));
+>>>>>>> 059eae8 (Cập nhật code)
         return d;
     }
 

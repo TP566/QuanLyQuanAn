@@ -2,6 +2,10 @@ poly\quanan\ui\manager\UserManagerJDialog$1.class
 poly\quanan\dao\BillDetailDAO.class
 poly\quanan\ui\manager\LoaiMonAnManagerJDialog$7.class
 poly\quanan\entity\Bill.class
+<<<<<<< HEAD
+=======
+poly\quanan\ui\manager\DrinkManagerJDialog$17.class
+>>>>>>> 059eae8 (Cập nhật code)
 poly\quanan\ui\manager\LoaiMonAnManagerJDialog.class
 poly\quanan\util\XDate.class
 poly\quanan\util\XDialog.class
@@ -38,11 +42,21 @@ poly\quanan\entity\Revenue$ByLoai.class
 poly\quanan\ui\manager\UserManagerJDialog$7.class
 poly\quanan\ui\LichSuJDialog$4$1.class
 poly\quanan\ui\NhaCungCapJDialog.class
+<<<<<<< HEAD
 poly\quanan\ui\manager\DrinkManagerJDialog$7.class
 poly\quanan\ui\manager\LoaiMonAnManagerJDialog$13.class
 poly\quanan\dao\impl\LoaiMonAnDAOImpl.class
 poly\quanan\ui\NhaCungCapJDialog$12.class
 poly\quanan\ui\WelcomeController.class
+=======
+poly\quanan\ui\manager\LoaiMonAnManagerJDialog$13.class
+poly\quanan\ui\manager\DrinkManagerJDialog$7.class
+poly\quanan\dao\impl\LoaiMonAnDAOImpl.class
+poly\quanan\entity\Card.class
+poly\quanan\ui\NhaCungCapJDialog$12.class
+poly\quanan\ui\WelcomeController.class
+poly\quanan\ui\SalesJDialog$1.class
+>>>>>>> 059eae8 (Cập nhật code)
 poly\quanan\dao\BillDAO.class
 poly\quanan\ui\manager\UserManagerJDialog$17.class
 poly\quanan\util\XIcon.class
@@ -57,6 +71,10 @@ poly\quanan\ui\NhaCungCapJDialog$18.class
 poly\quanan\ui\LichSuJDialog$3.class
 poly\quanan\ui\manager\BillManagerJDialog$7.class
 poly\quanan\dao\impl\NhaCungCapDAOImpl.class
+<<<<<<< HEAD
+=======
+poly\quanan\ui\SalesJDialog.class
+>>>>>>> 059eae8 (Cập nhật code)
 poly\quanan\ui\NhaCungCapJDialog$14.class
 poly\quanan\ui\manager\RevenueMannagerJDialog$2.class
 poly\quanan\ui\manager\DrinkController.class
@@ -68,13 +86,20 @@ poly\quanan\ui\manager\UserManagerJDialog$2.class
 poly\quanan\ui\LoginController.class
 poly\quanan\ui\QuanAnJFrame$11.class
 poly\quanan\dao\impl\BillDAOImpl.class
+<<<<<<< HEAD
 poly\quanan\ui\manager\DrinkManagerJDialog$16$1.class
+=======
+>>>>>>> 059eae8 (Cập nhật code)
 poly\quanan\ui\manager\RevenueMannagerJDialog.class
 poly\quanan\ui\QuanAnJFrame$1.class
 poly\quanan\ui\NhaCungCapJDialog$7.class
 poly\quanan\ui\manager\LoaiMonAnManagerJDialog$5.class
 poly\quanan\entity\BillDetail.class
 poly\quanan\entity\Revenue.class
+<<<<<<< HEAD
+=======
+poly\quanan\ui\SalesJDialog$2.class
+>>>>>>> 059eae8 (Cập nhật code)
 poly\quanan\dao\DrinkDAO.class
 poly\quanan\ui\manager\UserManagerJDialog$5.class
 poly\quanan\ui\manager\LoaiMonAnManagerJDialog$12.class
@@ -83,6 +108,10 @@ poly\quanan\entity\LoaiMonAn.class
 poly\quanan\ui\manager\LoaiMonAnController.class
 poly\quanan\entity\NhaCungCap.class
 poly\quanan\util\XQuery.class
+<<<<<<< HEAD
+=======
+poly\quanan\ui\SalesController.class
+>>>>>>> 059eae8 (Cập nhật code)
 poly\quanan\ui\QuanAnJFrame.class
 poly\quanan\ui\manager\UserManagerJDialog$3.class
 poly\quanan\ui\manager\UserManagerJDialog$17$1.class
@@ -93,6 +122,10 @@ poly\quanan\ui\NhaCungCapJDialog$9.class
 poly\quanan\ui\QuanAnJFrame$13.class
 poly\quanan\dao\RevenueDAO.class
 poly\quanan\ui\LoginJDialog.class
+<<<<<<< HEAD
+=======
+poly\quanan\ui\SalesJDialog$2$1.class
+>>>>>>> 059eae8 (Cập nhật code)
 poly\quanan\ui\NhaCungCapJDialog$15.class
 poly\quanan\ui\manager\LoaiMonAnManagerJDialog$3.class
 poly\quanan\ui\LichSuJDialog$2.class
@@ -110,6 +143,10 @@ poly\quanan\ui\NhaCungCapController.class
 poly\quanan\ui\ChangePasswordJDialog.class
 poly\quanan\ui\manager\UserManagerJDialog$4.class
 poly\quanan\ui\manager\LoaiMonAnManagerJDialog$16.class
+<<<<<<< HEAD
+=======
+poly\quanan\entity\Card$CardBuilder.class
+>>>>>>> 059eae8 (Cập nhật code)
 poly\quanan\ui\QuanAnJFrame$3.class
 poly\quanan\ui\LichSuJDialog$4.class
 poly\quanan\ui\manager\DrinkManagerJDialog$5.class
@@ -121,12 +158,20 @@ poly\quanan\ui\QuanAnController.class
 com\poly\polyquanan\PolyQuanAn.class
 poly\quanan\ui\LoginJDialog$3.class
 poly\quanan\ui\manager\DrinkManagerJDialog$15.class
+<<<<<<< HEAD
+=======
+poly\quanan\dao\CardDAO.class
+>>>>>>> 059eae8 (Cập nhật code)
 poly\quanan\dao\UserDAO.class
 poly\quanan\dao\impl\DrinkDAOImpl.class
 poly\quanan\ui\NhaCungCapJDialog$19$1.class
 poly\quanan\ui\QuanAnJFrame$8.class
 poly\quanan\ui\manager\BillManagerJDialog$5.class
 poly\quanan\ui\LichSuJDialog$5.class
+<<<<<<< HEAD
+=======
+poly\quanan\ui\manager\DrinkManagerJDialog$17$1.class
+>>>>>>> 059eae8 (Cập nhật code)
 poly\quanan\ui\LoginJDialog$2.class
 poly\quanan\ui\manager\DrinkManagerJDialog$14.class
 poly\quanan\entity\Bill$BillBuilder.class
@@ -149,15 +194,26 @@ poly\quanan\ui\manager\DrinkManagerJDialog$3.class
 poly\quanan\ui\ChangePasswordJDialog$2.class
 poly\quanan\ui\NhaCungCapJDialog$4.class
 poly\quanan\ui\NhaCungCapJDialog$1.class
+<<<<<<< HEAD
 poly\quanan\ui\manager\BillManagerJDialog$1.class
 poly\quanan\ui\manager\UserManagerJDialog$12.class
+=======
+poly\quanan\ui\manager\UserManagerJDialog$12.class
+poly\quanan\ui\manager\BillManagerJDialog$1.class
+>>>>>>> 059eae8 (Cập nhật code)
 poly\quanan\ui\manager\RevenueMannagerJDialog$5.class
 poly\quanan\ui\QuanAnJFrame$4.class
 poly\quanan\ui\manager\LoaiMonAnManagerJDialog$15.class
 poly\quanan\util\XJdbc.class
 poly\quanan\ui\manager\BillManagerJDialog$4.class
 poly\quanan\ui\manager\LoaiMonAnManagerJDialog$8.class
+<<<<<<< HEAD
 poly\quanan\dao\CrudDAO.class
+=======
+poly\quanan\dao\impl\CardDAOimpl.class
+poly\quanan\dao\CrudDAO.class
+poly\quanan\entity\NhaCungCap$NhaCungCapBuilder.class
+>>>>>>> 059eae8 (Cập nhật code)
 poly\quanan\ui\QuanAnJFrame$7.class
 poly\quanan\ui\manager\RevenueMannagerJDialog$8.class
 poly\quanan\ui\manager\UserManagerJDialog$15.class
@@ -169,8 +225,13 @@ poly\quanan\ui\manager\RevenueController.class
 poly\quanan\ui\manager\RevenueMannagerJDialog$7.class
 poly\quanan\ui\manager\BillManagerJDialog$2.class
 poly\quanan\ui\manager\UserManagerJDialog$14.class
+<<<<<<< HEAD
 poly\quanan\ui\manager\BillManagerJDialog.class
 poly\quanan\ui\manager\UserManagerJDialog$9.class
+=======
+poly\quanan\ui\manager\UserManagerJDialog$9.class
+poly\quanan\ui\manager\BillManagerJDialog.class
+>>>>>>> 059eae8 (Cập nhật code)
 poly\quanan\ui\manager\DrinkManagerJDialog.class
 poly\quanan\ui\manager\UserManagerJDialog.class
 poly\quanan\ui\manager\DrinkManagerJDialog$11.class
